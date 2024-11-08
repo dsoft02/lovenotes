@@ -136,21 +136,8 @@ class AdminController extends Controller
             // Add the white box to main image
             $img->place($textBox, 'top-left', $boxX, $boxY);
 
-            // Add username and time
-            $username = $loveNote->name ?: 'Anonymous';
-            $age = $loveNote->age ?: '';
-            $gender = ($loveNote->gender && strtolower($loveNote->gender) !== 'none') ? $loveNote->gender : '';
-            if ($age && $gender) {
-                $author = "$username $age, $gender";
-            } elseif ($age) {
-                $author = "$username $age";
-            } elseif ($gender) {
-                $author = "$username, $gender";
-            } else {
-                $author = $username;
-            }
-
-            $img->text($author, $boxX + 20, $boxY + 30, function($font) {
+            // Add author name
+            $img->text($loveNote->author, $boxX + 20, $boxY + 30, function($font) {
                 $font->file(public_path('fonts/Poppins-Bold.ttf'));
                 $font->size(24);
                 $font->color('#000000');

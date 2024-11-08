@@ -115,9 +115,7 @@
                             <div class="text-overlay">
                                 <p>
                                  <strong>
-                                    {{ $lovenote->name }}
-                                    {{ $lovenote->age > 0 ? $lovenote->age . ' years' : '' }}
-                                    {{ ($lovenote->gender && strtolower($lovenote->gender) !== 'none') ? $lovenote->gender : '' }}
+                                    {{ $lovenote->author }}
                                   </strong>
                                 <p>
                                     {!! $lovenote->message !!}
