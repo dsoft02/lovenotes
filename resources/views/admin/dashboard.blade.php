@@ -83,4 +83,9 @@
 @endsection
 
 @push('scripts')
+<script>
+    $(function () {
+        $('#list-table').DataTable();
+      })
+</script>
 @endpush
