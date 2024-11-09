@@ -1,6 +1,10 @@
 $(function () {
     $('.select2').select2();
 
+    $('#list-table').DataTable(
+        {responsive: true}
+    );
+
     // Function to allow only integers (whole numbers)
     $(".number").keypress(function(event) {
       if (

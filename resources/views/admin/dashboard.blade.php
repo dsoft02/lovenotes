@@ -29,7 +29,8 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <table id="list-table" class="table table-bordered table-striped">
+                    <div class="table-responsive" style="width:100%;">
+                        <table id="list-table" class="table table-bordered table-striped dt-responsive display nowrap">
                         <thead>
                         <tr>
                             <th>#</th>
@@ -70,6 +71,7 @@
                         @endforeach
                         </tbody>
                     </table>
+                    </div>
                 </div>
                 <!-- /.box-body -->
             </div>
@@ -83,9 +85,4 @@
 @endsection
 
 @push('scripts')
-<script>
-    $(function () {
-        $('#list-table').DataTable();
-      })
-</script>
 @endpush
