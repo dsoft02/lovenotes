@@ -123,8 +123,8 @@ class AdminController extends Controller
             $lines = explode("\n", $wrappedText);
             $numLines = count($lines);
 
-            // Calculate text box height
-            $textBoxHeight = ($fontSize * $lineHeight) * $numLines + 20;
+            // Calculate text box height with a minimum of 200
+            $textBoxHeight = max(200, ($fontSize * $lineHeight) * $numLines + 20);
 
             // Create white box for text
             $textBox = $manager->create(850, $textBoxHeight)->fill('fff');
